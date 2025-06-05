@@ -4,6 +4,7 @@ This repository contains Arduino sketches for the M5Core2 board.
 
 * `hello_world` - displays a simple "Hello World" message.
 * `imu_display` - reads IMU data (accelerometer, gyroscope and orientation) and shows the values on the screen.
+* `imu_instrument` - plays tones whose frequency depends on changes in the accelerometer data.
 
 ## Building
 
