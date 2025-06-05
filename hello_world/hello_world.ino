@@ -1,4 +1,4 @@
-#include <M5Core2.h>
+#include <M5Unified.h>
 
 void setup() {
   M5.begin();

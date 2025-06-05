@@ -1,8 +1,8 @@
-#include <M5Core2.h>
+#include <M5Unified.h>
 
 void setup() {
   M5.begin();
-  M5.IMU.Init();
+  M5.Imu.begin();
   M5.Lcd.setTextSize(2);
   M5.Lcd.fillScreen(BLACK);
 }
@@ -12,9 +12,9 @@ void loop() {
   float gyroX, gyroY, gyroZ;
   float pitch, roll, yaw;
 
-  M5.IMU.getAccelData(&accX, &accY, &accZ);
-  M5.IMU.getGyroData(&gyroX, &gyroY, &gyroZ);
-  M5.IMU.getAhrsData(&pitch, &roll, &yaw);
+  M5.Imu.getAccelData(&accX, &accY, &accZ);
+  M5.Imu.getGyroData(&gyroX, &gyroY, &gyroZ);
+  M5.Imu.getAhrsData(&pitch, &roll, &yaw);
 
   M5.Lcd.setCursor(0, 0);
   M5.Lcd.clear();
