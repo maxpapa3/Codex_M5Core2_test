@@ -1,4 +1,4 @@
-#include <M5Core2.h>
+#include <M5Unified.h>
 
 float prevAccX = 0.0f;
 float prevAccY = 0.0f;
@@ -6,8 +6,7 @@ float prevAccZ = 0.0f;
 
 void setup() {
   M5.begin();
-  M5.IMU.Init();
-  M5.Speaker.begin();
+  M5.Imu.begin();
   M5.Lcd.setTextSize(2);
   M5.Lcd.fillScreen(BLACK);
   M5.Lcd.setCursor(10, 10);
@@ -16,7 +15,7 @@ void setup() {
 
 void loop() {
   float accX, accY, accZ;
-  M5.IMU.getAccelData(&accX, &accY, &accZ);
+  M5.Imu.getAccelData(&accX, &accY, &accZ);
 
   float dx = accX - prevAccX;
   float dy = accY - prevAccY;
